@@ -1,0 +1,52 @@
+{
+  "icon": "lacework_icon.svg",
+  "host": {
+    "binaries": [
+      {
+        "darwin": [
+          {
+            "path": "/host/darwin/lw-scanner"
+          },
+          {
+            "path": "/host/scripts/run.sh"
+          },
+          {
+            "path": "/host/scripts/config.sh"
+          }
+        ],
+        "linux": [
+          {
+            "path": "/host/linux/lw-scanner"
+          },
+          {
+            "path": "/host/scripts/run.sh"
+          },
+          {
+            "path": "/host/scripts/config.sh"
+          }
+        ],
+        "windows": [
+          {
+            "path": "/host/windows/lw-scanner.exe"
+          },
+          {
+            "path": "/host/scripts/run.cmd"
+          },
+          {
+            "path": "/host/scripts/config.cmd"
+          },
+          {
+            "path": "/host/scripts/config-reset.cmd"
+          }
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "dashboard-tab": {
+      "title": "Lacework Scanner",
+      "src": "index.html",
+      "root": "/ui"
+    }
+  }
+}

@@ -1,0 +1,2132 @@
+{
+  "cve": {
+    "total_vulnerabilities": 87,
+    "total_exceptions": 0,
+    "critical_vulnerabilities": 1,
+    "high_vulnerabilities": 9,
+    "medium_vulnerabilities": 5,
+    "low_vulnerabilities": 8,
+    "info_vulnerabilities": 64,
+    "fixable_vulnerabilities": 1,
+    "last_evaluation_time": "2022-05-10T18:56:07.046Z",
+    "image": {
+      "image_info": {
+        "image_digest": "sha256:859ab6768a6f26a79bc42b231664111317d095a4f04e4b6fe79ce37b3d199097",
+        "image_id": "sha256:fa5269854a5e615e51a72b17ad3fd1e01268f278a6684c8ed3c5f0cdce3f230b",
+        "registry": "",
+        "repository": "nginx",
+        "created_time": "2022-04-20T10:43:12.055Z",
+        "size": 141522124,
+        "tags": [
+          "latest"
+        ]
+      },
+      "image_layers": [
+        {
+          "hash": "sha256:6e3692f03eefee9a819cd5ef747d7331ec6a1e20b65d5eb648b923469e74377e",
+          "created_by": "ADD file:8b1e79f91081eb527b455431af58e823d8b84d9d0c8e5c47cb7bda7507954ae4 in / ",
+          "packages": [
+            {
+              "name": "util-linux",
+              "namespace": "debian:11",
+              "version": "2.36.1-8+deb11u1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-0563",
+                  "description": "A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \\\\INPUTRC\\\\ environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-0563",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-02-21T19:15Z",
+                        "Score": 1.9,
+                        "Vectors": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 3.6,
+                        "Score": 5.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "shadow",
+              "namespace": "debian:11",
+              "version": "1:4.8.1-1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2013-4235",
+                  "description": "shadow: TOCTOU (time-of-check time-of-use) race condition when copying and removing directory trees",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2013-4235",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-12-03T15:15Z",
+                        "Score": 3.3,
+                        "Vectors": "AV:L/AC:M/Au:N/C:N/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1,
+                        "ImpactScore": 3.6,
+                        "Score": 4.7,
+                        "Vectors": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-19882",
+                  "description": "shadow 4.8, in certain circumstances affecting at least Gentoo, Arch Linux, and Void Linux, allows local users to obtain root access because setuid programs are misconfigured. Specifically, this affects shadow 4.8 when compiled using --with-libpam but without explicitly passing --disable-account-tools-setuid, and without a PAM configuration suitable for use with setuid account management tools. This combination leads to account management tools (groupadd, groupdel, groupmod, useradd, userdel, usermod) that can easily be used by unprivileged local users to escalate privileges to root in multiple ways. This issue became much more relevant in approximately December 2019 when an unrelated bug was fixed (i.e., the chmod calls to suidusbins were fixed in the upstream Makefile which is now included in the release version 4.8).",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-19882",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-12-18T16:15Z",
+                        "Score": 6.9,
+                        "Vectors": "AV:L/AC:M/Au:N/C:C/I:C/A:C"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.9,
+                        "Score": 7.8,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2007-5686",
+                  "description": "initscripts in rPath Linux 1 sets insecure permissions for the /var/log/btmp file, which allows local users to obtain sensitive information regarding authentication attempts.  NOTE: because sshd detects the insecure permissions and does not log certain events, this also prevents sshd from logging failed authentication attempts by remote attackers.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2007-5686",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2007-10-28T17:08Z",
+                        "Score": 4.9,
+                        "Vectors": "AV:L/AC:L/Au:N/C:C/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "e2fsprogs",
+              "namespace": "debian:11",
+              "version": "1.46.2-2",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-1304",
+                  "description": "An out-of-bounds read/write vulnerability was found in e2fsprogs 1.46.5. This issue leads to a segmentation fault and possibly arbitrary code execution via a specially crafted filesystem.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1304",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-04-14T21:15Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.9,
+                        "Score": 7.8,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "ncurses",
+              "namespace": "debian:11",
+              "version": "6.2+20201114-2",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-39537",
+                  "description": "An issue was discovered in ncurses through v6.2-1. _nc_captoinfo in captoinfo.c has a heap-based buffer overflow.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-39537",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-09-20T16:15Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 5.9,
+                        "Score": 8.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-29458",
+                  "description": "ncurses 6.3 before patch 20220416 has an out-of-bounds read and segmentation violation in convert_strings in tinfo/read_entry.c in the terminfo library.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-29458",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-04-18T21:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.2,
+                        "Score": 7.1,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "tar",
+              "namespace": "debian:11",
+              "version": "1.34+dfsg-1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2005-2541",
+                  "description": "Tar 1.15.1 does not properly warn the user when extracting setuid or setgid files, which may allow local users or remote attackers to gain privileges.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2005-2541",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2005-08-10T04:00Z",
+                        "Score": 10,
+                        "Vectors": "AV:N/AC:L/Au:N/C:C/I:C/A:C"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "krb5",
+              "namespace": "debian:11",
+              "version": "1.18.3-6+deb11u1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2018-5709",
+                  "description": "An issue was discovered in MIT Kerberos 5 (aka krb5) through 1.16. There is a variable \\\\dbentry-\u003en_key_data\\\\ in kadmin/dbutil/dump.c that can store 16-bit data but unknowingly the developer has assigned a \\\\u4\\\\ variable to it, which is for 32-bit data. An attacker can use this vulnerability to affect other artifacts of the database as we know that a Kerberos database dump file contains trusted data.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2018-5709",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-01-16T09:29Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2004-0971",
+                  "description": "The krb5-send-pr script in the kerberos5 (krb5) package in Trustix Secure Linux 1.5 through 2.1, and possibly other operating systems, allows local users to overwrite files via a symlink attack on temporary files.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2004-0971",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2005-02-09T05:00Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "coreutils",
+              "namespace": "debian:11",
+              "version": "8.32-4+b1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2017-18018",
+                  "description": "In GNU Coreutils through 8.29, chown-core.c in chown and chgrp does not prevent replacement of a plain file with a symlink during use of the POSIX \\\\-R -L\\\\ options, which allows local users to modify the ownership of arbitrary files by leveraging a race condition.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-18018",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-01-04T04:29Z",
+                        "Score": 1.9,
+                        "Vectors": "AV:L/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1,
+                        "ImpactScore": 3.6,
+                        "Score": 4.7,
+                        "Vectors": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2016-2781",
+                  "description": "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2016-2781",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-02-07T15:59Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2,
+                        "ImpactScore": 4,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "xz-utils",
+              "namespace": "debian:11",
+              "version": "5.2.5-2",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-1271",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1271",
+                  "fix_version": "5.2.5-2.1~deb11u1",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "perl",
+              "namespace": "debian:11",
+              "version": "5.32.1-4+deb11u2",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2011-4116",
+                  "description": "_is_safe in the File::Temp module for Perl does not properly handle symlinks.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2011-4116",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-31T18:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-16156",
+                  "description": "CPAN 2.28 allows Signature Verification Bypass.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2020-16156",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-12-13T18:15Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.9,
+                        "Score": 7.8,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "pcre2",
+              "namespace": "debian:11",
+              "version": "10.36-2",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-1586",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1586",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-1587",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1587",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libgcrypt20",
+              "namespace": "debian:11",
+              "version": "1.8.7-6",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-33560",
+                  "description": "Libgcrypt before 1.8.8 and 1.9.x before 1.9.3 mishandles ElGamal encryption because it lacks exponent blinding to address a side-channel attack against mpi_powm, and the window size is not chosen appropriately. This, for example, affects use of ElGamal in OpenPGP.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-33560",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-06-08T11:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-6829",
+                  "description": "cipher/elgamal.c in Libgcrypt through 1.8.2, when used to encrypt messages directly, improperly encodes plaintexts, which allows attackers to obtain sensitive information by reading ciphertext data (i.e., it does not have semantic security in face of a ciphertext-only attack). The Decisional Diffie-Hellman (DDH) assumption does not hold for Libgcrypt's ElGamal implementation.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2018-6829",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-02-07T23:29Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "coreutils",
+              "namespace": "debian:11",
+              "version": "8.32-4",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2017-18018",
+                  "description": "In GNU Coreutils through 8.29, chown-core.c in chown and chgrp does not prevent replacement of a plain file with a symlink during use of the POSIX \\\\-R -L\\\\ options, which allows local users to modify the ownership of arbitrary files by leveraging a race condition.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-18018",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-01-04T04:29Z",
+                        "Score": 1.9,
+                        "Vectors": "AV:L/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1,
+                        "ImpactScore": 3.6,
+                        "Score": 4.7,
+                        "Vectors": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2016-2781",
+                  "description": "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2016-2781",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-02-07T15:59Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2,
+                        "ImpactScore": 4,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "apt",
+              "namespace": "debian:11",
+              "version": "2.2.4",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2011-3374",
+                  "description": "It was found that apt-key in apt, all versions, do not correctly validate gpg keys with the master keyring, leading to a potential man-in-the-middle attack.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2011-3374",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-11-26T00:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "gzip",
+              "namespace": "debian:11",
+              "version": "1.10-4",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-1271",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1271",
+                  "fix_version": "1.10-4+deb11u1",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "pcre3",
+              "namespace": "debian:11",
+              "version": "2:8.39-13",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2017-16231",
+                  "description": "** DISPUTED ** In PCRE 8.41, after compiling, a pcretest load test PoC produces a crash overflow in the function match() in pcre_exec.c because of a self-recursive call. NOTE: third parties dispute the relevance of this report, noting that there are options that can be used to limit the amount of stack that is used.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-16231",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-03-21T15:59Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 3.6,
+                        "Score": 5.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-7245",
+                  "description": "Stack-based buffer overflow in the pcre32_copy_substring function in pcre_get.c in libpcre1 in PCRE 8.40 allows remote attackers to cause a denial of service (WRITE of size 4) or possibly have unspecified other impact via a crafted file.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-7245",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-03-23T21:59Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.9,
+                        "Score": 7.8,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-11164",
+                  "description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-11164",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-07-11T03:29Z",
+                        "Score": 7.8,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:C"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-7246",
+                  "description": "Stack-based buffer overflow in the pcre32_copy_substring function in pcre_get.c in libpcre1 in PCRE 8.40 allows remote attackers to cause a denial of service (WRITE of size 268) or possibly have unspecified other impact via a crafted file.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-7246",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-03-23T21:59Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.9,
+                        "Score": 7.8,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-20838",
+                  "description": "libpcre in PCRE before 8.43 allows a subject buffer over-read in JIT when UTF is disabled, and \\\\\\\\X or \\\\\\\\R has more than one fixed quantifier, a related issue to CVE-2019-20454.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-20838",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-06-15T17:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libsepol",
+              "namespace": "debian:11",
+              "version": "3.1-1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-36086",
+                  "description": "The CIL compiler in SELinux 3.2 has a use-after-free in cil_reset_classpermission (called from cil_reset_classperms_set and cil_reset_classperms_list).",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-36086",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-07-01T03:15Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 1.4,
+                        "Score": 3.3,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-36085",
+                  "description": "The CIL compiler in SELinux 3.2 has a use-after-free in __cil_verify_classperms (called from __verify_map_perm_classperms and hashtab_map).",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-36085",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-07-01T03:15Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 1.4,
+                        "Score": 3.3,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-36084",
+                  "description": "The CIL compiler in SELinux 3.2 has a use-after-free in __cil_verify_classperms (called from __cil_verify_classpermission and __cil_pre_verify_helper).",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-36084",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-07-01T03:15Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 1.4,
+                        "Score": 3.3,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-36087",
+                  "description": "The CIL compiler in SELinux 3.2 has a heap-based buffer over-read in ebitmap_match_any (called indirectly from cil_check_neverallow). This occurs because there is sometimes a lack of checks for invalid statements in an optional block.",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-36087",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-07-01T03:15Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 1.4,
+                        "Score": 3.3,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "gnutls28",
+              "namespace": "debian:11",
+              "version": "3.7.1-5",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2011-3389",
+                  "description": "The SSL protocol, as used in certain configurations in Microsoft Windows and Microsoft Internet Explorer, Mozilla Firefox, Google Chrome, Opera, and other products, encrypts data by using CBC mode with chained initialization vectors, which allows man-in-the-middle attackers to obtain plaintext HTTP headers via a blockwise chosen-boundary attack (BCBA) on an HTTPS session, in conjunction with JavaScript code that uses (1) the HTML5 WebSocket API, (2) the Java URLConnection API, or (3) the Silverlight WebClient API, aka a \\\\BEAST\\\\ attack.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2011-3389",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2011-09-06T19:55Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-4209",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-4209",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "glibc",
+              "namespace": "debian:11",
+              "version": "2.31-13+deb11u3",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2018-20796",
+                  "description": "In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix/regexec.c has Uncontrolled Recursion, as demonstrated by '(\\\\\\\\227|)(\\\\\\\\\\\\\\\\1\\\\\\\\\\\\\\\\1|t1|\\\\\\\\\\\\\\\\\\\\\\\\2537)+' in grep.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2018-20796",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-02-26T02:29Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-3999",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-3999",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-1010023",
+                  "description": "** DISPUTED ** GNU Libc current is affected by: Re-mapping current loaded library with malicious ELF file. The impact is: In worst case attacker may evaluate privileges. The component is: libld. The attack vector is: Attacker sends 2 ELF files to victim and asks to run ldd on it. ldd execute code. NOTE: Upstream comments indicate \\\\this is being treated as a non-security bug and no real threat.\\\\",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-1010023",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-15T04:15Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 5.9,
+                        "Score": 8.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-9192",
+                  "description": "** DISPUTED ** In the GNU C Library (aka glibc or libc6) through 2.29, check_dst_limits_calc_pos_1 in posix/regexec.c has Uncontrolled Recursion, as demonstrated by '(|)(\\\\\\\\\\\\\\\\1\\\\\\\\\\\\\\\\1)*' in grep, a different issue than CVE-2018-20796. NOTE: the software maintainer disputes that this is a vulnerability because the behavior occurs only with a crafted pattern.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-9192",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-02-26T18:29Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-1010024",
+                  "description": "** DISPUTED ** GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass ASLR using cache of thread stack and heap. The component is: glibc. NOTE: Upstream comments indicate \\\\this is being treated as a non-security bug and no real threat.\\\\",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-1010024",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-15T04:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-1010022",
+                  "description": "** DISPUTED ** GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may bypass stack guard protection. The component is: nptl. The attack vector is: Exploit stack buffer overflow vulnerability and use this bypass vulnerability to bypass stack guard. NOTE: Upstream comments indicate \\\\this is being treated as a non-security bug and no real threat.\\\\",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-1010022",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-15T04:15Z",
+                        "Score": 7.5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 5.9,
+                        "Score": 9.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-1010025",
+                  "description": "** DISPUTED ** GNU Libc current is affected by: Mitigation bypass. The impact is: Attacker may guess the heap addresses of pthread_created thread. The component is: glibc. NOTE: the vendor's position is \\\\ASLR bypass itself is not a vulnerability.\\\\",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-1010025",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-15T04:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2010-4756",
+                  "description": "The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2010-4756",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2011-03-02T20:00Z",
+                        "Score": 4,
+                        "Vectors": "AV:N/AC:L/Au:S/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "systemd",
+              "namespace": "debian:11",
+              "version": "247.3-7",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2020-13529",
+                  "description": "An exploitable denial-of-service vulnerability exists in Systemd 245. A specially crafted DHCP FORCERENEW packet can cause a server running the DHCP client to be vulnerable to a DHCP ACK spoofing attack. An attacker can forge a pair of FORCERENEW and DCHP ACK packets to reconfigure the server.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2020-13529",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-05-10T16:15Z",
+                        "Score": 2.9,
+                        "Vectors": "AV:A/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 4,
+                        "Score": 6.1,
+                        "Vectors": "CVSS:3.0/AV:A/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2013-4392",
+                  "description": "systemd, when updating file permissions, allows local users to change the permissions and SELinux security contexts for arbitrary files via a symlink attack on unspecified files.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2013-4392",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2013-10-28T22:55Z",
+                        "Score": 3.3,
+                        "Vectors": "AV:L/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "openssl",
+              "namespace": "debian:11",
+              "version": "1.1.1n-0+deb11u1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2010-0928",
+                  "description": "OpenSSL 0.9.8i on the Gaisler Research LEON3 SoC on the Xilinx Virtex-II Pro FPGA uses a Fixed Width Exponentiation (FWE) algorithm for certain signature calculations, and does not verify the signature before providing it to a caller, which makes it easier for physically proximate attackers to determine the private key via a modified supply voltage for the microprocessor, related to a \\\\fault-based attack.\\\\",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2010-0928",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2010-03-05T19:30Z",
+                        "Score": 4,
+                        "Vectors": "AV:L/AC:H/Au:N/C:C/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2007-6755",
+                  "description": "The NIST SP 800-90A default statement of the Dual Elliptic Curve Deterministic Random Bit Generation (Dual_EC_DRBG) algorithm contains point Q constants with a possible relationship to certain \\\\skeleton key\\\\ values, which might allow context-dependent attackers to defeat cryptographic protection mechanisms by leveraging knowledge of those values.  NOTE: this is a preliminary CVE for Dual_EC_DRBG; future research may provide additional details about point Q and associated attacks, and could potentially lead to a RECAST or REJECT of this CVE.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2007-6755",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2013-10-11T22:55Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-1292",
+                  "description": "The c_rehash script does not properly sanitise shell metacharacters to prevent command injection. This script is distributed by some operating systems in a manner where it is automatically executed. On such operating systems, an attacker could execute arbitrary commands with the privileges of the script. Use of the c_rehash script is considered obsolete and should be replaced by the OpenSSL rehash command line tool. Fixed in OpenSSL 3.0.3 (Affected 3.0.0,3.0.1,3.0.2). Fixed in OpenSSL 1.1.1o (Affected 1.1.1-1.1.1n). Fixed in OpenSSL 1.0.2ze (Affected 1.0.2-1.0.2zd).",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1292",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hash": "sha256:cbc43ab6db49f8ba5b20db3cf14b317a55391ce0effeb067684f568e29e8cbdb",
+          "created_by": "set -x     \u0026\u0026 addgroup --system --gid 101 nginx     \u0026\u0026 adduser --system --disabled-login --ingroup nginx --no-create-home --home /nonexistent --gecos \"nginx user\" --shell /bin/false --uid 101 nginx     \u0026\u0026 apt-get update     \u0026\u0026 apt-get install --no-install-recommends --no-install-suggests -y gnupg1 ca-certificates     \u0026\u0026     NGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62;     found='';     for server in         hkp://keyserver.ubuntu.com:80         pgp.mit.edu     ; do         echo \"Fetching GPG key $NGINX_GPGKEY from $server\";         apt-key adv --keyserver \"$server\" --keyserver-options timeout=10 --recv-keys \"$NGINX_GPGKEY\" \u0026\u0026 found=yes \u0026\u0026 break;     done;     test -z \"$found\" \u0026\u0026 echo \u003e\u00262 \"error: failed to fetch GPG key $NGINX_GPGKEY\" \u0026\u0026 exit 1;     apt-get remove --purge --auto-remove -y gnupg1 \u0026\u0026 rm -rf /var/lib/apt/lists/*     \u0026\u0026 dpkgArch=\"$(dpkg --print-architecture)\"     \u0026\u0026 nginxPackages=\"         nginx=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}+${NJS_VERSION}-${PKG_RELEASE}     \"     \u0026\u0026 case \"$dpkgArch\" in         amd64|arm64)             echo \"deb https://nginx.org/packages/mainline/debian/ bullseye nginx\" \u003e\u003e /etc/apt/sources.list.d/nginx.list             \u0026\u0026 apt-get update             ;;         *)             echo \"deb-src https://nginx.org/packages/mainline/debian/ bullseye nginx\" \u003e\u003e /etc/apt/sources.list.d/nginx.list                         \u0026\u0026 tempDir=\"$(mktemp -d)\"             \u0026\u0026 chmod 777 \"$tempDir\"                         \u0026\u0026 savedAptMark=\"$(apt-mark showmanual)\"                         \u0026\u0026 apt-get update             \u0026\u0026 apt-get build-dep -y $nginxPackages             \u0026\u0026 (                 cd \"$tempDir\"                 \u0026\u0026 DEB_BUILD_OPTIONS=\"nocheck parallel=$(nproc)\"                     apt-get source --compile $nginxPackages             )                         \u0026\u0026 apt-mark showmanual | xargs apt-mark auto \u003e /dev/null             \u0026\u0026 { [ -z \"$savedAptMark\" ] || apt-mark manual $savedAptMark; }                         \u0026\u0026 ls -lAFh \"$tempDir\"             \u0026\u0026 ( cd \"$tempDir\" \u0026\u0026 dpkg-scanpackages . \u003e Packages )             \u0026\u0026 grep '^Package: ' \"$tempDir/Packages\"             \u0026\u0026 echo \"deb [ trusted=yes ] file://$tempDir ./\" \u003e /etc/apt/sources.list.d/temp.list             \u0026\u0026 apt-get -o Acquire::GzipIndexes=false update             ;;     esac         \u0026\u0026 apt-get install --no-install-recommends --no-install-suggests -y                         $nginxPackages                         gettext-base                         curl     \u0026\u0026 apt-get remove --purge --auto-remove -y \u0026\u0026 rm -rf /var/lib/apt/lists/* /etc/apt/sources.list.d/nginx.list         \u0026\u0026 if [ -n \"$tempDir\" ]; then         apt-get purge -y --auto-remove         \u0026\u0026 rm -rf \"$tempDir\" /etc/apt/sources.list.d/temp.list;     fi     \u0026\u0026 ln -sf /dev/stdout /var/log/nginx/access.log     \u0026\u0026 ln -sf /dev/stderr /var/log/nginx/error.log     \u0026\u0026 mkdir /docker-entrypoint.d",
+          "packages": [
+            {
+              "name": "curl",
+              "namespace": "debian:11",
+              "version": "7.74.0-1.3+deb11u1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-22923",
+                  "description": "When curl is instructed to get content using the metalink feature, and a user name and password are used to download the metalink XML file, those same credentials are then subsequently passed on to each of the servers from which curl will download or try to download the contents from. Often contrary to the user's expectations and intentions and without telling the user it happened.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22923",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-08-05T21:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 3.6,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-22947",
+                  "description": "When curl \u003e= 7.20.0 and \u003c= 7.78.0 connects to an IMAP or POP3 server to retrieve data using STARTTLS to upgrade to TLS security, the server can respond and send back multiple responses at once that curl caches. curl would then upgrade to TLS but not flush the in-queue of cached responses but instead continue using and trustingthe responses it got *before* the TLS handshake as if they were authenticated.Using this flaw, it allows a Man-In-The-Middle attacker to first inject the fake responses, then pass-through the TLS traffic from the legitimate server and trick curl into sending data back to the user thinking the attacker's injected data comes from the TLS-protected server.",
+                  "severity": "Medium",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22947",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-09-29T20:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 3.6,
+                        "Score": 5.9,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-22576",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-22576",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-22946",
+                  "description": "A user can tell curl \u003e= 7.20.0 and \u003c= 7.78.0 to require a successful upgrade to TLS when speaking to an IMAP, POP3 or FTP server ('--ssl-reqd' on the command line or'CURLOPT_USE_SSL' set to 'CURLUSESSL_CONTROL' or 'CURLUSESSL_ALL' withlibcurl). This requirement could be bypassed if the server would return a properly crafted but perfectly legitimate response.This flaw would then make curl silently continue its operations **withoutTLS** contrary to the instructions and expectations, exposing possibly sensitive data in clear text over the network.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22946",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-09-29T20:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-27776",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-27776",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-27774",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-27774",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-22945",
+                  "description": "When sending data to an MQTT server, libcurl \u003c= 7.73.0 and 7.78.0 could in some circumstances erroneously keep a pointer to an already freed memory area and both use that again in a subsequent call to send data and also free it *again*.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22945",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-09-23T13:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 5.2,
+                        "Score": 9.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-27775",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-27775",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-22922",
+                  "description": "When curl is instructed to download content using the metalink feature, thecontents is verified against a hash provided in the metalink XML file.The metalink XML file points out to the client how to get the same contentfrom a set of different URLs, potentially hosted by different servers and theclient can then download the file from one or several of them. In a serial orparallel manner.If one of the servers hosting the contents has been breached and the contentsof the specific file on that server is replaced with a modified payload, curlshould detect this when the hash of the file mismatches after a completeddownload. It should remove the contents and instead try getting the contentsfrom another URL. This is not done, and instead such a hash mismatch is onlymentioned in text and the potentially malicious content is kept in the file ondisk.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22922",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-08-05T21:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-22898",
+                  "description": "curl 7.7 through 7.76.1 suffers from an information disclosure when the '-t' command line option, known as 'CURLOPT_TELNETOPTIONS' in libcurl, is used to send variable=content pairs to TELNET servers. Due to a flaw in the option parser for sending NEW_ENV variables, libcurl could be made to pass on uninitialized data from a stack based buffer to the server, resulting in potentially revealing sensitive internal information to the server using a clear-text network protocol.",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22898",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-06-11T16:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-22924",
+                  "description": "libcurl keeps previously used connections in a connection pool for subsequenttransfers to reuse, if one of them matches the setup.Due to errors in the logic, the config matching function did not take 'issuercert' into account and it compared the involved paths *case insensitively*,which could lead to libcurl reusing wrong connections.File paths are, or can be, case sensitive on many systems but not all, and caneven vary depending on used file systems.The comparison also didn't include the 'issuer cert' which a transfer can setto qualify how to verify the server certificate.",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-22924",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-08-05T21:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "freetype",
+              "namespace": "debian:11",
+              "version": "2.10.4+dfsg-1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-27404",
+                  "description": "FreeType commit 1e2eb65048f75c64b68708efed6ce904c31f3b2f was discovered to contain a heap buffer overflow via the function sfnt_init_face.",
+                  "severity": "Critical",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-27404",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-04-22T14:15Z",
+                        "Score": 7.5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 5.9,
+                        "Score": 9.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-27405",
+                  "description": "FreeType commit 53dfdcd8198d2b3201a23c4bad9190519ba918db was discovered to contain a segmentation violation via the function FNT_Size_Request.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-27405",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-04-22T14:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-27406",
+                  "description": "FreeType commit 22a0cccb4d9d002f33c1ba7a4b36812c7d4f46b5 was discovered to contain a segmentation violation via the function FT_Request_Size.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-27406",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-04-22T14:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libwebp",
+              "namespace": "debian:11",
+              "version": "0.6.1-2.1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2016-9085",
+                  "description": "Multiple integer overflows in libwebp allows attackers to have unspecified impact via unknown vectors.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2016-9085",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-02-03T15:59Z",
+                        "Score": 2.1,
+                        "Vectors": "AV:L/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 1.4,
+                        "Score": 3.3,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libxml2",
+              "namespace": "debian:11",
+              "version": "2.9.10+dfsg-6.7+deb11u1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-29824",
+                  "description": "In libxml2 before 2.9.14, several buffer handling functions in buf.c (xmlBuf*) and tree.c (xmlBuffer*) don't check for integer overflows. This can result in out-of-bounds memory writes. Exploitation requires a victim to open a crafted, multi-gigabyte XML file. Other software using libxml2's buffer functions, for example libxslt through 1.1.35, is affected as well.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-29824",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "expat",
+              "namespace": "debian:11",
+              "version": "2.2.10-2+deb11u3",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2013-0340",
+                  "description": "expat 2.1.0 and earlier does not properly handle entities expansion unless an application developer uses the XML_SetEntityDeclHandler function, which allows remote attackers to cause a denial of service (resource consumption), send HTTP requests to intranet servers, or read arbitrary files via a crafted XML document, aka an XML External Entity (XXE) issue.  NOTE: it could be argued that because expat already provides the ability to disable external entity expansion, the responsibility for resolving this issue lies with application developers; according to this argument, this entry should be REJECTed, and each affected application would need its own CVE.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2013-0340",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2014-01-21T18:55Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "nginx",
+              "namespace": "debian:11",
+              "version": "1.21.6-1~bullseye",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-3618",
+                  "description": "ALPACA is an application layer protocol content confusion attack, exploiting TLS servers implementing different protocols but using compatible certificates, such as multi-domain or wildcard certificates. A MiTM attacker having access to victim's traffic at the TCP/IP layer can redirect traffic from one subdomain to another, resulting in a valid TLS session. This breaks the authentication of TLS and cross-protocol attacks may be possible where the behavior of one protocol service may compromise the other at the application layer.",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-3618",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-03-23T20:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 5.2,
+                        "Score": 7.4,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2013-0337",
+                  "description": "The default configuration of nginx, possibly 1.3.13 and earlier, uses world-readable permissions for the (1) access.log and (2) error.log files, which allows local users to obtain sensitive information by reading the files.",
+                  "severity": "Low",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2013-0337",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2013-10-27T00:55Z",
+                        "Score": 7.5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2009-4487",
+                  "description": "nginx 0.7.64 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2009-4487",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2010-01-13T20:30Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-36309",
+                  "description": "ngx_http_lua_module (aka lua-nginx-module) before 0.10.16 in OpenResty allows unsafe characters in an argument when using the API to mutate a URI, or a request or response header.",
+                  "severity": "Medium",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2020-36309",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-04-06T19:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "jbigkit",
+              "namespace": "debian:11",
+              "version": "2.1-3.1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2017-9937",
+                  "description": "In LibTIFF 4.0.8, there is a memory malloc failure in tif_jbig.c. A crafted TIFF document can lead to an abort resulting in a remote denial of service attack.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-9937",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-06-26T12:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libpng1.6",
+              "namespace": "debian:11",
+              "version": "1.6.37-3",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2019-6129",
+                  "description": "** DISPUTED ** png_create_info_struct in png.c in libpng 1.6.36 has a memory leak, as demonstrated by pngcp. NOTE: a third party has stated \\\\I don't think it is libpng's job to free this buffer.\\\\",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2019-6129",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-01-11T05:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-4214",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-4214",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "tiff",
+              "namespace": "debian:11",
+              "version": "4.2.0-1+deb11u1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-1210",
+                  "description": "A vulnerability classified as problematic was found in LibTIFF 4.3.0. Affected by this vulnerability is the TIFF File Handler of tiff2ps. Opening a malicious file leads to a denial of service. The attack can be launched remotely but requires user interaction. The exploit has been disclosed to the public and may be used.",
+                  "severity": "Medium",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1210",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-04-03T09:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-5563",
+                  "description": "LibTIFF version 4.0.7 is vulnerable to a heap-based buffer over-read in tif_lzw.c resulting in DoS or code execution via a crafted bmp image to tools/bmp2tiff.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-5563",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-01-23T07:59Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 5.9,
+                        "Score": 8.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-17973",
+                  "description": "** DISPUTED ** In LibTIFF 4.0.8, there is a heap-based use-after-free in the t2p_writeproc function in tiff2pdf.c. NOTE: there is a third-party report of inability to reproduce this issue.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-17973",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-12-29T21:29Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 5.9,
+                        "Score": 8.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-1355",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1355",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-9117",
+                  "description": "In LibTIFF 4.0.7, the program processes BMP images without verifying that biWidth and biHeight in the bitmap-information header match the actual input, leading to a heap-based buffer over-read in bmp2tiff.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-9117",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-05-21T19:29Z",
+                        "Score": 7.5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 5.9,
+                        "Score": 9.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-10126",
+                  "description": "LibTIFF 4.0.9 has a NULL pointer dereference in the jpeg_fdct_16x16 function in jfdctint.c.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2018-10126",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-04-21T21:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-1056",
+                  "description": "Out-of-bounds Read error in tiffcrop in libtiff 4.3.0 allows attackers to cause a denial-of-service via a crafted tiff file. For users that compile libtiff from sources, the fix is available with commit 46dc8fcd.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1056",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-03-28T19:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 3.6,
+                        "Score": 5.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2022-1354",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-1354",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-16232",
+                  "description": "** DISPUTED ** LibTIFF 4.0.8 has multiple memory leak vulnerabilities, which allow attackers to cause a denial of service (memory consumption), as demonstrated by tif_open.c, tif_lzw.c, and tif_aux.c. NOTE: Third parties were unable to reproduce the issue.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-16232",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-03-21T15:59Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2014-8130",
+                  "description": "The _TIFFmalloc function in tif_unix.c in LibTIFF 4.0.3 does not reject a zero size, which allows remote attackers to cause a denial of service (divide-by-zero error and application crash) via a crafted TIFF image that is mishandled by the TIFFWriteScanline function in tif_write.c, as demonstrated by tiffdither.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2014-8130",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-03-12T02:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libxslt",
+              "namespace": "debian:11",
+              "version": "1.1.34-4",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2015-9019",
+                  "description": "In libxslt 1.1.29 and earlier, the EXSLT math.random function was not initialized with a random seed during startup, which could cause usage of this function to produce predictable outputs.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2015-9019",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-04-05T21:59Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libgd2",
+              "namespace": "debian:11",
+              "version": "2.3.0-2",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-38115",
+                  "description": "read_header_tga in gd_tga.c in the GD Graphics Library (aka LibGD) through 2.3.2 allows remote attackers to cause a denial of service (out-of-bounds read) via a crafted TGA file.",
+                  "severity": "Medium",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-38115",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-08-04T21:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-40812",
+                  "description": "The GD Graphics Library (aka LibGD) through 2.3.2 has an out-of-bounds read because of the lack of certain gdGetBuf and gdPutBuf return value checks.",
+                  "severity": "Medium",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-40812",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-09-08T21:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-40145",
+                  "description": "** DISPUTED ** gdImageGd2Ptr in gd_gd2.c in the GD Graphics Library (aka LibGD) through 2.3.2 has a double free. NOTE: the vendor's position is \\\\The GD2 image format is a proprietary image format of libgd. It has to be regarded as being obsolete, and should only be used for development and testing purposes.\\\\",
+                  "severity": "High",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2021-40145",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-08-26T01:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "openldap",
+              "namespace": "debian:11",
+              "version": "2.4.57+dfsg-3",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2022-29155",
+                  "description": "",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2022-29155",
+                  "fix_version": "",
+                  "metadata": null,
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-15719",
+                  "description": "libldap in certain third-party OpenLDAP packages has a certificate-validation flaw when the third-party package is asserting RFC6125 support. It considers CN even when there is a non-matching subjectAltName (SAN). This is fixed in, for example, openldap-2.4.46-10.el8 in Red Hat Enterprise Linux.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2020-15719",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-14T14:15Z",
+                        "Score": 4,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 2.5,
+                        "Score": 4.2,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-17740",
+                  "description": "contrib/slapd-modules/nops/nops.c in OpenLDAP through 2.4.45, when both the nops module and the memberof overlay are enabled, attempts to free a buffer that was allocated on the stack, which allows remote attackers to cause a denial of service (slapd crash) via a member MODDN operation.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-17740",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-12-18T06:29Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2015-3276",
+                  "description": "The nss_parse_ciphers function in libraries/libldap/tls_m.c in OpenLDAP does not properly parse OpenSSL-style multi-keyword mode cipher strings, which might cause a weaker than intended cipher to be used and allow remote attackers to have unspecified impact via unknown vectors.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2015-3276",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2015-12-07T20:59Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0,
+                        "ImpactScore": 0,
+                        "Score": 0,
+                        "Vectors": ""
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2017-14159",
+                  "description": "slapd in OpenLDAP 2.4.45 and earlier creates a PID file after dropping privileges to a non-root account, which might allow local users to kill arbitrary processes by leveraging access to this non-root account for PID file modification before a root script executes a \\\\kill 'cat /pathname'\\\\ command, as demonstrated by openldap-initscript.",
+                  "severity": "Info",
+                  "link": "https://security-tracker.debian.org/tracker/CVE-2017-14159",
+                  "fix_version": "",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2017-09-05T18:29Z",
+                        "Score": 1.9,
+                        "Vectors": "AV:L/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1,
+                        "ImpactScore": 3.6,
+                        "Score": 4.7,
+                        "Vectors": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hash": "sha256:bb51095d7612f83c02f55b6271fd58ad7fdb26a79db43bdec6e42f04994e3908",
+          "created_by": "COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / ",
+          "packages": []
+        },
+        {
+          "hash": "sha256:5b7adcb1cb05756b066c95193d83280d6cfe042be8d023a223e984229d926e93",
+          "created_by": "COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d ",
+          "packages": []
+        },
+        {
+          "hash": "sha256:0a9f796d3695cc7befcf42a513ed63e147c4ab256bc29ed71dcc866a74f1ebb6",
+          "created_by": "COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d ",
+          "packages": []
+        },
+        {
+          "hash": "sha256:439e291fa5c7eb5d6657c513c8250550afd78a854c73818fc5b3c92def80201a",
+          "created_by": "COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d ",
+          "packages": []
+        }
+      ]
+    },
+    "scan_status": "Success"
+  },
+  "policy": null
+}
