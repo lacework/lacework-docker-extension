@@ -10,7 +10,7 @@ function Release() {
   // useEffect(() => {
   //   let version = semver.coerce(process.env.REACT_APP_RELEASE);
   //   if(version?.version) setCurrentRelease(version?.version||"unknown");
-  //   fetch('https://api.github.com/repos/l6khq/lacework-docker-extension/releases')
+  //   fetch('https://api.github.com/repos/lacework/lacework-docker-extension/releases')
   //   .then(result => result.json())
   //   .then(json => {
   //     if(json[0]) {

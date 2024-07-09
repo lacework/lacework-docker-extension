@@ -30,12 +30,12 @@ LABEL org.opencontainers.image.title="Lacework Scanner" \
     org.opencontainers.image.description="Lacework Scanner integration for Docker Desktop enables developers with the insights to secure build their containers and minimize the vulnerabilities before the images go into production." \
     org.opencontainers.image.vendor="Lacework Inc." \
     com.docker.desktop.extension.api.version=">= 0.2.3" \
-    com.docker.desktop.extension.icon="https://raw.githubusercontent.com/l6khq/lacework-docker-extension/main/lacework_icon.svg" \
-    com.docker.extension.screenshots='[{"alt":"Lacework Scanner","url":"https://raw.githubusercontent.com/l6khq/lacework-docker-extension/main/lacework-docker-extension.png"}]' \
+    com.docker.desktop.extension.icon="https://raw.githubusercontent.com/lacework/lacework-docker-extension/main/lacework_icon.svg" \
+    com.docker.extension.screenshots='[{"alt":"Lacework Scanner","url":"https://raw.githubusercontent.com/lacework/lacework-docker-extension/main/lacework-docker-extension.png"}]' \
     com.docker.extension.detailed-description="Lacework Scanner extension for Docker Desktop allows developers to leverage the vulnerability scanning capabilities of the Lacework platform directly without having to use the commandline.  Lacework Inline Scanner is leverage together with an optimized UI to support the developer experience and workflow and enable a shift-left approach to understand vulnerabilities at the source." \
     com.docker.extension.publisher-url="https://www.lacework.com" \
-    com.docker.extension.additional-urls='[{"title":"GitHub Repo","url":"https://github.com/l6khq/lacework-docker-extension"},{"title":"Support","url":"https://github.com/l6khq/lacework-docker-extension/issues"}]' \
-    com.docker.extension.changelog="https://github.com/l6khq/lacework-docker-extension/releases"
+    com.docker.extension.additional-urls='[{"title":"GitHub Repo","url":"https://github.com/lacework/lacework-docker-extension"},{"title":"Support","url":"https://github.com/lacework/lacework-docker-extension/issues"}]' \
+    com.docker.extension.changelog="https://github.com/lacework/lacework-docker-extension/releases"
 
 # COPY --from=builder /backend/bin/service /
 # COPY docker-compose.yaml .

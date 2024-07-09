@@ -203,11 +203,11 @@ function App() {
             <div className={"hide-"+view}>Lacework Scanner Version: {version}</div>
             <div className="chips-top">
               <Chip icon={<GitHubIcon />} 
-                onClick={()=>ddClient.host.openExternal("https://github.com/l6khq/lacework-docker-extension")}
-                label="l6khq/lacework-docker-extension" variant="outlined" />
+                onClick={()=>ddClient.host.openExternal("https://github.com/lacework/lacework-docker-extension")}
+                label="lacework/lacework-docker-extension" variant="outlined" />
               &nbsp;
               <Chip icon={<BugReportIcon />}
-                onClick={()=>ddClient.host.openExternal("https://github.com/l6khq/lacework-docker-extension/issues")}
+                onClick={()=>ddClient.host.openExternal("https://github.com/lacework/lacework-docker-extension/issues")}
                 label="GitHub Issues" variant="outlined" />
             </div>
             <ConfigToken onSuccess={getConfig} />
@@ -229,11 +229,11 @@ function App() {
           <div className={"hide-"+view}>Lacework Scanner Version: {version}</div>
           <div className="chips-top">
             <Chip icon={<GitHubIcon />}
-              onClick={()=>ddClient.host.openExternal("https://github.com/l6khq/lacework-docker-extension")}               
-              label="l6khq/lacework-docker-extension" variant="outlined" />                                                 
+              onClick={()=>ddClient.host.openExternal("https://github.com/lacework/lacework-docker-extension")}               
+              label="lacework/lacework-docker-extension" variant="outlined" />                                                 
             &nbsp;                                            
             <Chip icon={<BugReportIcon />}
-              onClick={()=>ddClient.host.openExternal("https://github.com/l6khq/lacework-docker-extension/issues")}
+              onClick={()=>ddClient.host.openExternal("https://github.com/lacework/lacework-docker-extension/issues")}
               label="GitHub Issues" variant="outlined" />
           </div>
           <h2 className={"hide-"+view}>Scan container images using Lacework Inline Scanner</h2>

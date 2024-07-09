@@ -4,7 +4,7 @@ This is a public beta and released as open source.  This extension relies on `lw
 
 To use this extension, an active Lacework subscription is required with access to a Lacework inline scanner token.
 
-For any recommendations, suggestions, feature requests and issue, head over the the project's [GitHub Issues tracker](https://github.com/l6khq/lacework-docker-extension/issues).
+For any recommendations, suggestions, feature requests and issue, head over the the project's [GitHub Issues tracker](https://github.com/lacework/lacework-docker-extension/issues).
 
 ![Lacework Scanner](lacework-docker-extension.png "Lacework Scanner")
 
