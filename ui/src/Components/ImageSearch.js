@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Autocomplete, Button, TextField, Box } from "@mui/material";
 import { createDockerDesktopClient } from '@docker/extension-api-client';
 const client = createDockerDesktopClient();

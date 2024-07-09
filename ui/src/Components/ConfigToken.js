@@ -1,5 +1,5 @@
 import { createDockerDesktopClient } from "@docker/extension-api-client";
-import { Box, Button, FormControl, FormGroup, Link, TextField, Typography } from "@mui/material";
+import { Box, Button, Link, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 const client = createDockerDesktopClient();

@@ -1,19 +1,19 @@
-import { Box, Button, ButtonGroup, Tab, Tabs, Modal, Typography, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
+import { Box, Button, ButtonGroup, Tab, Tabs, Typography, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from "@mui/material";
 import { useEffect, useState } from "react";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 
-const cveModalStyle = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '70%',
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 4,
-};
+// const cveModalStyle = {
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   width: '70%',
+//   bgcolor: 'background.paper',
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 function translateSeverity(severity) {
   if(severity==="Critical") return 5;
