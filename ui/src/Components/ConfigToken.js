@@ -41,7 +41,7 @@ function ConfigToken(props) {
     <Box  sx={{width: '60%', marginLeft: '20%'}}>
       <h2>Let's get Lacework Scanner configured!</h2>
       <Typography>
-        You will need to have an active Lacework subscription to use this extension.  You can review the <Link onClick={() => ddClient.host.openExternal("https://docs.lacework.com/integrate-inline-scanner#obtain-the-inline-scanner-and-authorization-token")}>docs</Link> to generate a new access token.
+        You will need to have an active Lacework subscription to use this extension.  You can review the <Link onClick={() => ddClient.host.openExternal("https://docs.lacework.net/vulnerabilities/integrate-inline-scanner#obtain-the-inline-scanner-and-authorization-token")}>docs</Link> to generate a new access token.
       </Typography>
       <TextField value={account} onChange={e=>setAccount(e.target.value)} 
         size="small"
